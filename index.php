@@ -39,7 +39,7 @@ if (is_readable($config_filename))
 
 //constants 1
 define("PROJECT", "phpLiteAdmin");
-define("VERSION", "1.9.9-dev");
+define("VERSION", "1.10");
 define("FORCETYPE", false); //force the extension that will be used (set to false in almost all circumstances except debugging, possible values: false, "PDO", "SQLite3", "SQLiteDatabase")
 define("SYSTEMPASSWORD", $password); // Makes things easier.
 define('PROJECT_URL','https://www.phpliteadmin.org/');
@@ -3434,8 +3434,8 @@ if(!$target_table && !isset($_GET['confirm']) && (!isset($_GET['action']) || (is
 		echo "<b>".$lang['sqlite_ext']."</b> ".helpLink($lang['help1']).": ".$db->getType()."<br/>";
 		echo "<b>".$lang['php_v']."</b>: ".phpversion()."<br/>";
 		echo "<b>".PROJECT." ".$lang["ver"]."</b>: ".VERSION;
-		echo " <a href='".PROJECT_URL."' target='_blank' id='oldVersion' style='display: none;' class='warning'>".$lang['new_version']."</a><br/><br/>";
-		echo "<script type='text/javascript'>checkVersion('".VERSION."','".VERSION_CHECK_URL."');</script>";
+//		echo " <a href='".PROJECT_URL."' target='_blank' id='oldVersion' style='display: none;' class='warning'>".$lang['new_version']."</a><br/><br/>";
+//		echo "<script type='text/javascript'>checkVersion('".VERSION."','".VERSION_CHECK_URL."');</script>";
 
 		if(isset($_GET['sort']) && ($_GET['sort']=='type' || $_GET['sort']=='name'))
 			$_SESSION[COOKIENAME.'sortTables'] = $_GET['sort'];
